@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="helloWorld" class="com.newone.ann.HelloWorldImpl">
+   <property name = "helloIndia" ref = "helloIndia"/>
+  	<property name = "helloCanada" ref = "helloCanada"/>
+  </bean>
+  <bean id="helloIndia" class="com.newone.ann.HelloIndia"></bean>
+  <bean id="helloCanada" class="com.newone.ann.HelloCanada"></bean>  
+   
+   <!-- If I define the above and below both, the above will override autowiring -->
+   
+  <!--  <bean id="helloWorld" class="com.newone.ann.HelloWorldImpl" autowire="byName"> </bean>
+   <bean id="helloIndia" class="com.newone.ann.HelloIndia" autowire="byName"></bean>
+   <bean id="helloCanada" class="com.newone.ann.HelloCanada" autowire="byName"></bean> -->
+   
+</beans>
